@@ -1,6 +1,6 @@
-$total-columns    : 6;
+$total-columns    : 12;
 $column-width     : 5em;
-$gutter-width     : 1em;
+$gutter-width     : 0em;
 $grid-padding     : 0;
 
 $ipad-columns     : 8;
@@ -37,7 +37,7 @@ $side   : $total-columns - $anchor;
 }
 
 .main-content {
-  background: image-url("bg-map.gif") no-repeat center top;
+  background: image-url("") no-repeat center top;
   min-height: 600px;
   @include transition(margin .3s);
   @include span-columns($total-columns omega);  
@@ -64,7 +64,7 @@ $side   : $total-columns - $anchor;
 }
 
 @include at-breakpoint($desktop) {
-  $side : 3;
+  $side : 10;
   $main: $desktop-columns - $side;
   $grid-padding: $gutter-width;
   .page {
@@ -91,8 +91,9 @@ $side   : $total-columns - $anchor;
 
 // this year
 .topic {
-  background: rgba(black,.75);
-  border: 3px double $blue;
+  background: rgba(white,.75);
+  border: 5px solid $gray;
+  border-radius: 10px;
   margin: -3px auto ($base-line-height - 3px);
   overflow: hidden;
   br {
@@ -184,8 +185,9 @@ $side   : $total-columns - $anchor;
   }
 }
 
+/* all page*/
 %col2 {
-  background: rgba(black,.7);
+  background: rgba(white,.7);
 
   ol {
     margin: 0 1.3em;
@@ -210,7 +212,7 @@ $side   : $total-columns - $anchor;
         .span {
           padding: 0 $base-line-height / 2;
           display: inline;
-          background: black;
+          background: white;
         }
       }
     }
@@ -240,7 +242,7 @@ $side   : $total-columns - $anchor;
   @include at-breakpoint($desktop) {
     @include reset-columns;
     @include push(0);
-    background: rgba(black,.3);
+    background: rgba(white,.6);  /* desktop bg*/
     .content {
       @include span-columns(6);
       @include nth-omega();
@@ -260,7 +262,7 @@ $side   : $total-columns - $anchor;
 }
 
 .sponsor {
-  background: rgba(black,.7);
+  background: rgba(white,.1);
   padding: 3em;
 }
 

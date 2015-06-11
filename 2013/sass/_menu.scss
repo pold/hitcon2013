@@ -1,25 +1,28 @@
 .main-menu {
   .title {
     padding: 0 $base-line-height / 2;
-    font-size: 12px;
+    font-size: 20px;
     line-height: $base-line-height * 2 - 1px;
-    border-bottom: 1px solid $yellow;
+    border-bottom: 0px solid $yellow;
     position: relative;
     z-index: 99;
-    color: $red;
+    color: $white;
+    background: $green;  
   }
   .menu-item {
     list-style: none;
-    border-bottom: 1px solid $blue;
+    background:$green;
+    padding:0px;
+    margin:0px!important;
     a {
-      display: block;
-      padding: 0 $base-line-height / 2;
       line-height: $base-line-height * 2 - 1px;
+      text-indent:30px;
       @include transition(background-color .3s .3s);
       @include unstyled-link;
       @include link-colors($white);
+      display:flex;
       &:active {
-        color: $yellow;
+        color: $black;
         background: rgba($white,.1);
         border: 1px solid $white;
         border-width: 1px 0;
@@ -37,37 +40,46 @@
     }
     ul {
       @include pie-clearfix;
+      background:$green;
     }
     .menu-item {
+      width:16.6%!important;
       // @include isolate-grid(2);
       @include span-columns(2);
       @include nth-omega;
+      background: $green;      
       line-height: $base-line-height - 1px;
       text-align: center;
       position: relative;
-      top: - $base-line-height / 2;
+      display:inline-block;
       @include transition(border-color .3s .3s);
       &:hover {
         border-color: $white;
       }
       a {
         position: relative;
-        top: $base-line-height / 2;
-        display: inline;
+        top: 0;
+        display: inline-block;
         font-size: 15px;
         line-height: $base-line-height - 1px;
-        background: black;
-        @include link-colors($red);
+        background: $green;
+        width:100%;
+        padding:1em 0;
+        text-indent:0;
+        @include link-colors($white);
         @include transition( background-color .3s );
+        border:1px solid $green;
         &:hover {
-          background: black;
-          color: $yellow;
-          text-shadow: 0 0 5px rgba($yellow, 1);
-          border: none;
+          background: $white;
+          color: $green;
+          text-shadow: 0 0 5px rgba($white, 1);
+          border:1px solid $green;
         }
       }
       &:first-child {
         display: none;
+      }
+      &:last-child {
       }
     }
   }

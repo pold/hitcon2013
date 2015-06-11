@@ -1,26 +1,30 @@
+
 .hero {
-  display: none;
+  display: block;
+  background: image-url("hero.png") repeat-x center top;
   @include at-breakpoint($desktop) {
     display: block;
-    height: 600px;
-    background: image-url("hero.png") no-repeat center top;
+    height: 500px;
+    background: image-url("hero.png") repeat-x center top;
     .slogan {
-      display: none;
+      display: block;
     }
     a {
       position: absolute;
-      top: 401px;
+      top: 400px;
       width: 100%;
       @include transition(.3s);
       &:hover {
-        background: rgba(black,.7);
+        background: rgba(white,.7);
       }
     }
     hgroup {
+    text-align:center;
+      background: block;
+      @include replace-text-with-svg("logo-large");      
+
       .title {
-        background: black;
-        @include replace-text-with-svg("logo-large");
-        margin: 0 auto;
+        background: block;
       }
       width: 600px - 2px;
       height: 100px - 1px;
@@ -30,28 +34,30 @@
   }
 }
 
+
 .hero-page {
-  display: none;
   a {
     display: block;
   }
   @include at-breakpoint($desktop) {
     display: block;
-    height: 200px - 1px;
-    padding-top: 51px;
-    background: image-url("hero.png") no-repeat center bottom;
+    height: 100px;
+    padding-top: 0px;
+    background: image-url("logo-large.svg") no-repeat center bottom;
+    bac
     .slogan {
-      display: none;
+      display: block;
     }
     a {
       @include transition(.3s);
       &:hover {
-        background: rgba(black,.7);
+        background: rgba(yellow,.3);
       }
     }
     hgroup {
+    display:block;
       .title {
-        background: black;
+        background: block;
         @include replace-text-with-svg("logo-large");
         margin: 0 auto;
       }
@@ -59,6 +65,7 @@
       height: 100px - 1px;
       overflow: hidden;
       margin: 0 auto;
+      text-align:center;
     }
   }  
 }

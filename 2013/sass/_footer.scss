@@ -16,8 +16,8 @@
     @include columns(10em 3);
     @include column-gap(25px);
     a {
-      @include link-colors( darken($red, 10%) );
-      @include adjust-font-size-to(16px);
+      @include link-colors( darken($green, 10%) );
+      @include adjust-font-size-to(18px);
     }
   }
   .credit {

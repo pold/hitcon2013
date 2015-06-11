@@ -5,16 +5,18 @@ $relative-font-sizing: false;
 $grid-background-baseline-height: $base-line-height;
 
 $red:          #b6132d;
-$blue:         #2f4768;
+$blue:         #39c;
 $dark-blue:    #091324;
-$green:        #208e7f;
-$yellow:       #d1cc80;
+$green:        #99cc33;
+$yellow:       #f90;
 $dark-yellow:  darken(#d1cc80, 30%);
-$white:        #d1dffe;
+$white:        #fff;
+$gray:         #cccccc;
+$black:         #000;
 
 body {
-  background: black image-url("bg-grid.png") repeat-y center -1px;
-  color: $white;
+  background: black image-url("bg-grid.png");
+  color: $blue;
 }
 
 @import "compass";
@@ -39,3 +41,4 @@ body {
 @import "agenda";
 
 @import "canvas";
+@import "2015";
